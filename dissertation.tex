@@ -34,12 +34,12 @@ Depending on the work style adopted optimising can ether by utilised throughout 
 
 \section{Optimisation}
 Optimisation within games is the process making a software more efficient.
-This is important as it effects the users experience issues like low frame rate can make a game seem unresponsive.
+This is important as it affects the users experience issues like low frame rate can make a game seem unresponsive.
 Issues usually occurs under 30 frames per second.%%%Unite Europe 2017 - Performance optimization for beginners
-Optimisations can be done throughout al areas of the game by manually working with the scene or as this paper focuses on the games code.
+Optimisations can be done throughout all areas of the game by manually working with the scene or as this paper focuses on the games code.
 Within different engines video games there are several tools and methods for achieving this.
-One of the primary tools are profilers which monitor the games perfromance while it runs.
-These tools are often built into engines such as Unity and Unreals profilers.
+Profilers are the primary tool used to monitor the games performance while it runs.
+Profiling tools are often built into engines such as Unity and Unreals profilers.
 These are so important because they allow a user to find areas which can be optimised.
 
 \section{Unitys Profiler}
@@ -52,12 +52,12 @@ An important methodology in profiling is to run the profiler, analyses the resul
 The profiler runs along side the game and provides feedback on it in real time with graphs showing the performance of different components.%%%
 Spikes in the graph show areas which are more costly for performance then others.
 When using one of these profilers it is important to aim to replicate real world situations to get accurate results. 
-The software being optimised for COMP350 is designed for computers so optimising it on a laptop is suffecient but for a mobile game it would be important to profile it on that device.
+The software being optimised for COMP350 is designed for computers so optimising it on a laptop is sufficient but for a mobile game it would be important to profile it on that device.
 Doing this is important so when the profiler runs you can see the performance as users will experience it. %%%Unite Europe 2017 - Performance optimization for beginners
 
 
 \section{Loop Unrolling}
-One technique for optimising code is loop unrolling. Loop unrolling is where instead of contantly using loops that have to update the loop state each iteration manually calling functions. With static loop unrolling a user knows the length of an array and so can manuually call the functions they want easily. With an array of unknown size a just in time compiler can decide if a program uses a normal loop or make a sequence of individual instructions. With loop unrolling it is best for simple peices of code code that has lots of branches is also not suitable for this as it can make it even slower.%%%
+One technique for optimising code is loop unrolling. Loop unrolling is where instead of constantly using loops that have to update the loop state each iteration manually calling functions. With static loop unrolling a user knows the length of an array and so can manuually call the functions they want easily. With an array of unknown size a just in time compiler can decide if a program uses a normal loop or make a sequence of individual instructions. With loop unrolling it is best for simple peices of code code that has lots of branches is also not suitable for this as it can make it even slower.%%%
 Within the optimisation project this can be applied to the loop statement which spawns a certain amount of enemies. The amount of enemies which is spawned is a known amount so a static unlooping could be applied.
 This would detract from the readability of code so it would require comments to say what is happening but this trade off would be worth it for performance.%%%
 
@@ -76,7 +76,7 @@ Garbage collection is where data which is no longer required is removed from the
 Calling Garbage collection every frame is a waste of resources as it creates to much work for the device to do.
 It also means the impact of garbage collection is not as vital as it is only clearing with small amounts of memory.
 Without garbage collection however it can create a memory leak which results in a game crashing so it is important.
-Currently in the COMP350 optimisation module my garbage collection is happening way to often which is dmaging its perfromance.
+Currently in the COMP350 optimisation module my garbage collection is happening way to often which is damaging its performance.
 In order to try and optimise this element to the game one method is to reduce the amount of heap allocations and deallocations.
 The heap is where long term memory is stored like objects you create.%%%
 Object pooling can be used to reduce allocations and deallocations because it means destroying and spawning enemeis can be avoided.
